@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "_comment": "build 실서버를 위한 배포판을 만드는 명령어, start는 해당 배포판을 서비스하는데 사용됨."
   },
   "dependencies": {
     "react": "^18",

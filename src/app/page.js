@@ -1,5 +1,9 @@
 export default function Home() {
   return (
-    <>Hello, World!</>
+    <>
+   <h2>Welcome</h2>
+   Hello, WEB!
+   <img src="/hello.png"></img>
+   </>
   );
 }
