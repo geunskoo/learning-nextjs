@@ -8,6 +8,14 @@ function fetchProducts() {
 	return instance.get('/products');
 }
 
+// function fetchProducts(productId) {
+// 	return instance.get('/products', {
+// 		params: {
+// 			id: productId,
+// 		},
+// 	});
+// }
+
 function fetchProductById(productId) {
 	return instance.get(`/products/${productId}`);
 }
