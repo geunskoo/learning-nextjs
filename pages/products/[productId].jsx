@@ -1,3 +1,4 @@
+import { fetchProductById } from '@/api';
 import ProductHeader from '@/components/ProductHeader';
 import axios from 'axios';
 import Image from 'next/image';
@@ -24,7 +25,7 @@ export default ProductDetailPage;
 export async function getServerSideProps(context) {
 	console.log('## productId :', context.params.productId);
 	const id = context.params.productId;
-	const resp = await axios.get(`http://localhost:9999/products/${id}`);
+	const resp = await fetchProductById(id);
 
 	return {
 		props: { message: '서버에서 보내준 메세지', productDetail: resp.data },
