@@ -1,5 +1,5 @@
 import { fetchProductById } from '@/api';
-import ProductDetail from '@/components/ProductDetail';
+import ProductDetail from '@/components/product-detail/ProductDetail';
 import ProductHeader from '@/components/ProductHeader';
 
 function ProductDetailPage({ productDetail }) {

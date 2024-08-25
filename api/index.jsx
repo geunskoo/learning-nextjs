@@ -20,7 +20,29 @@ function fetchProductById(productId) {
 	return instance.get(`/products/${productId}`);
 }
 
-export { fetchProducts, fetchProductById };
+function createCartItem({ id, name, imageUrl, price }) {
+	return instance.post(`/carts`, {
+		id: id,
+		name,
+		imageUrl,
+		price,
+	});
+}
+function fetchCarts() {
+	return instance.get(`/carts`);
+}
+
+function removeCartItem(productId) {
+	return instance.delete(`/carts/${productId}`);
+}
+
+export {
+	fetchProducts,
+	fetchProductById,
+	createCartItem,
+	fetchCarts,
+	removeCartItem,
+};
 
 // create - 생성
 // delete - 삭제
